@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays em JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Manipulando Arrays em JavaScript</h1>
+      <p>Guia prático com exemplos interativos</p>
+    </header>
+
+    <!-- Seção shift() -->
+    <section>
+      <h2>shift()</h2>
+      <p class="method-description">Remove o primeiro item do array.</p>
+      <p class="analogy">A primeira pessoa da fila foi embora!</p>
+      
+      <div class="example-container">
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 1</h3>
+            <pre><code>let frutas = ["maçã", "banana", "laranja"];
+frutas.shift(); </code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoShift1', () => {
+              let frutas = ['maçã', 'banana', 'laranja'];
+              frutas.shift();
+              return frutas;
+            })">Rodar Exemplo 1</button>
+            <div class="result-container">
+              <pre id="resultadoShift1"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 2</h3>
+            <pre><code>let numeros = [10, 20, 30];
+numeros.shift();</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoShift2', () => {
+              let numeros = [10, 20, 30];
+              numeros.shift();
+              return numeros;
+            })">Rodar Exemplo 2</button>
+            <div class="result-container">
+              <pre id="resultadoShift2"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 3</h3>
+            <pre><code>let letras = ["x", "y", "z"];
+letras.shift();</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoShift3', () => {
+              let letras = ['x', 'y', 'z'];
+              letras.shift();
+              return letras;
+            })">Rodar Exemplo 3</button>
+            <div class="result-container">
+              <pre id="resultadoShift3"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção unshift() -->
+    <section>
+      <h2>unshift()</h2>
+      <p class="method-description">Adiciona um ou mais itens no início do array.</p>
+      <p class="analogy">Alguém furou a fila!</p>
+      
+      <div class="example-container">
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 1</h3>
+            <pre><code>let frutas = ["banana", "laranja"];
+frutas.unshift("maçã");</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoUnshift1', () => {
+              let frutas = ['banana', 'laranja'];
+              frutas.unshift('maçã');
+              return frutas;
+            })">Rodar Exemplo 1</button>
+            <div class="result-container">
+              <pre id="resultadoUnshift1"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 2</h3>
+            <pre><code>let numeros = [2, 3];
+numeros.unshift(1);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoUnshift2', () => {
+              let numeros = [2, 3];
+              numeros.unshift(1);
+              return numeros;
+            })">Rodar Exemplo 2</button>
+            <div class="result-container">
+              <pre id="resultadoUnshift2"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 3</h3>
+            <pre><code>let letras = ["b", "c"];
+letras.unshift("a");</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoUnshift3', () => {
+              let letras = ['b', 'c'];
+              letras.unshift('a');
+              return letras;
+            })">Rodar Exemplo 3</button>
+            <div class="result-container">
+              <pre id="resultadoUnshift3"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção concat() -->
+    <section>
+      <h2>concat()</h2>
+      <p class="method-description">Junta dois ou mais arrays em um novo array.</p>
+      <p class="analogy">Duas filas se unindo.</p>
+      
+      <div class="example-container">
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 1</h3>
+            <pre><code>let a = [1, 2];
+let b = [3, 4];
+let c = a.concat(b);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoConcat1', () => {
+              let a = [1, 2];
+              let b = [3, 4];
+              let c = a.concat(b);
+              return c;
+            })">Rodar Exemplo 1</button>
+            <div class="result-container">
+              <pre id="resultadoConcat1"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 2</h3>
+            <pre><code>let x = ["x"];
+let y = ["y", "z"];
+let resultado = x.concat(y);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoConcat2', () => {
+              let x = ['x'];
+              let y = ['y', 'z'];
+              let resultado = x.concat(y);
+              return resultado;
+            })">Rodar Exemplo 2</button>
+            <div class="result-container">
+              <pre id="resultadoConcat2"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 3</h3>
+            <pre><code>let nomes1 = ["Ana"];
+let nomes2 = ["Bia", "Carlos"];
+let todos = nomes1.concat(nomes2);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoConcat3', () => {
+              let nomes1 = ['Ana'];
+              let nomes2 = ['Bia', 'Carlos'];
+              let todos = nomes1.concat(nomes2);
+              return todos;
+            })">Rodar Exemplo 3</button>
+            <div class="result-container">
+              <pre id="resultadoConcat3"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção flat() -->
+    <section>
+      <h2>flat()</h2>
+      <p class="method-description">Achata arrays aninhados (arrays dentro de arrays).</p>
+      <p class="analogy">Tirar caixas de dentro de caixas.</p>
+      
+      <div class="example-container">
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 1</h3>
+            <pre><code>let arr1 = [1, [2, 3]];
+arr1.flat();</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoFlat1', () => {
+              let arr1 = [1, [2, 3]];
+              return arr1.flat();
+            })">Rodar Exemplo 1</button>
+            <div class="result-container">
+              <pre id="resultadoFlat1"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 2</h3>
+            <pre><code>let arr2 = [1, [2, [3, 4]]];
+arr2.flat(2);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoFlat2', () => {
+              let arr2 = [1, [2, [3, 4]]];
+              return arr2.flat(2);
+            })">Rodar Exemplo 2</button>
+            <div class="result-container">
+              <pre id="resultadoFlat2"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 3</h3>
+            <pre><code>let arr3 = [["a", "b"], "c"];
+arr3.flat();</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoFlat3', () => {
+              let arr3 = [['a', 'b'], 'c'];
+              return arr3.flat();
+            })">Rodar Exemplo 3</button>
+            <div class="result-container">
+              <pre id="resultadoFlat3"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção splice() -->
+    <section>
+      <h2>splice()</h2>
+      <p class="method-description">Remove, substitui ou adiciona elementos no array original.</p>
+      <p class="analogy">Abrir espaço no meio da fila pra adicionar ou remover pessoas.</p>
+      
+      <div class="example-container">
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 1</h3>
+            <pre><code>let nomes = ["Ana", "João", "Carlos"];
+nomes.splice(1, 1, "Maria");</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoSplice1', () => {
+              let nomes = ['Ana', 'João', 'Carlos'];
+              nomes.splice(1, 1, 'Maria');
+              return nomes;
+            })">Rodar Exemplo 1</button>
+            <div class="result-container">
+              <pre id="resultadoSplice1"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 2</h3>
+            <pre><code>let numeros = [1, 2, 3];
+numeros.splice(1, 0, 1.5);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoSplice2', () => {
+              let numeros = [1, 2, 3];
+              numeros.splice(1, 0, 1.5);
+              return numeros;
+            })">Rodar Exemplo 2</button>
+            <div class="result-container">
+              <pre id="resultadoSplice2"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 3</h3>
+            <pre><code>let letras = ["a", "b", "c"];
+letras.splice(0, 2);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoSplice3', () => {
+              let letras = ['a', 'b', 'c'];
+              letras.splice(0, 2);
+              return letras;
+            })">Rodar Exemplo 3</button>
+            <div class="result-container">
+              <pre id="resultadoSplice3"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção slice() -->
+    <section>
+      <h2>slice()</h2>
+      <p class="method-description">Copia parte do array sem modificar o original.</p>
+      <p class="analogy">Cortar uma fatia do bolo sem mexer no resto.</p>
+      
+      <div class="example-container">
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 1</h3>
+            <pre><code>let letras = ["a", "b", "c", "d", "e"];
+letras.slice(1, 4);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoSlice1', () => {
+              let letras = ['a', 'b', 'c', 'd', 'e'];
+              return letras.slice(1, 4);
+            })">Rodar Exemplo 1</button>
+            <div class="result-container">
+              <pre id="resultadoSlice1"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 2</h3>
+            <pre><code>let numeros = [10, 20, 30, 40];
+numeros.slice(2);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoSlice2', () => {
+              let numeros = [10, 20, 30, 40];
+              return numeros.slice(2);
+            })">Rodar Exemplo 2</button>
+            <div class="result-container">
+              <pre id="resultadoSlice2"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-theory">
+            <h3 class="example-title">Exemplo 3</h3>
+            <pre><code>let frutas = ["maçã", "banana", "laranja"];
+frutas.slice(0, 2);</code></pre>
+          </div>
+          <div class="interactive-example">
+            <button onclick="runExample('resultadoSlice3', () => {
+              let frutas = ['maçã', 'banana', 'laranja'];
+              return frutas.slice(0, 2);
+            })">Rodar Exemplo 3</button>
+            <div class="result-container">
+              <pre id="resultadoSlice3"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 Arrays em JavaScript - Todos os direitos reservados</p>
+    </footer>
+  </div>
+
+  <script>
+    function runExample(id, fn) {
+      const output = document.getElementById(id);
+      try {
+        const result = fn();
+        output.textContent = Array.isArray(result) ? JSON.stringify(result) : result;
+      } catch (e) {
+        output.textContent = "Erro: " + e.message;
+      }
+    }
+  </script>
+</body>
+</html>
